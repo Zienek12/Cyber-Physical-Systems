@@ -1,0 +1,13 @@
+close all;clear all;
+A = 7;
+B = 5;
+t_sim = 100;
+
+[model] = sim("schemat.slx", t_sim);
+
+model.basic
+
+figure();
+
+hold on;
+plot(model.tout,model.basic);
