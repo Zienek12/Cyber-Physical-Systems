@@ -2,9 +2,9 @@ clear all; close all; clc;
 
 L = 10;          % Szerokosc jeziora 
 c = 1;           % Predkosc propagacji
-T_max = 300;      % Czas symulacji 
+T_max = 30;      % Czas symulacji 
 dx = 0.1;        % Krok przestrzenny
-dt = 0.01;       % Krok czasowy  
+dt = 0.001;       % Krok czasowy  
 
 x = 0:dx:L;
 n = length(x);
@@ -12,8 +12,8 @@ r = (c * dt) / dx; % Wspolczynnik stabilnosci
 
 % Tworzenie tafli jeziora 
 aktualny = zeros(1, n);
-idx_3 = round(3/dx) + 1;
-idx_4 = round(4/dx) + 1;
+idx_3 = round(1/dx) + 1;
+idx_4 = round(5/dx) + 1;
 zakres = linspace(0, 2*pi, idx_4 - idx_3 + 1);
 aktualny(idx_3:idx_4) = -0.5 + 0.5 * cos(zakres);
 

@@ -37,3 +37,13 @@ plot(model.tout,model.dynamicSaturation,"LineWidth",1.5);
 
 
 legend("basic", "saturation", "dynamicSaturation");
+
+%% PID
+
+figure();
+hold on;
+grid on;
+xlabel('Time (s)');
+ylabel('Output');
+title('Simulation Results');
+plot(model.tout,model.PID,"LineWidth",1.5);
